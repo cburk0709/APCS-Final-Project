@@ -1,5 +1,4 @@
 # APCS-Final-Project
-Final project for AP Computer Science A
 Ok, this has been driving me crazy for seven movies now, and I know you’re going to roll your eyes, but hear me out: Harry Potter should have carried a 1911.
 
 Here’s why:
