@@ -20,6 +20,7 @@ Had project approved
 -Cards will be printed
 -Dividing work by classes to start:
   -Hand: Daniel
-  -Card/Deck: Connor
+  -Card/Deck, Controls, Debugging: Connor
   -Dealer: Nick
+  -toString() in Card: Thomas
 
