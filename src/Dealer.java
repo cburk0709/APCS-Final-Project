@@ -1,12 +1,22 @@
 public class Dealer implements Controls {
     private int totalValue;
 
+    public void stay(){
+        System.out.println("Stay!");
+    }
+
+    public Card hit(){
+        System.out.println("Hit!");
+      return Deck.deal();
+    }
+
     public boolean toHit() {
         if (totalValue <= 16) {
             return true;
         } else
             return false;
     }
+
 
 
 }
