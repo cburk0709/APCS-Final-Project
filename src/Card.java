@@ -18,6 +18,24 @@
     }
     //Make it ascii
     public String toString() {
-        return "";
+
+        String top= "_____";
+        String midTopx= "|"+rank+"   |";
+        String midBot="|    |";
+        String Botx="|___" + rank + "|";
+        String midBotTen="|     |";
+        if(rank != "10") {
+            return top + "\n" + midTopx + "\n" + midBot + "\n" + Botx;
+        }else{
+            return top + "\n" + midTopx + "\n" + midBotTen + "\n" + Botx;
+
+        }
     }
 }
+
+ //_____
+ //|K   |
+ //|    |
+ //|___K|
+
+
