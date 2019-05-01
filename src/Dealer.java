@@ -1,7 +1,7 @@
 public class Dealer{
     private int totalValue;
 
-    //Checks if dealer is going to hit or stay
+     //Checks if dealer is going to hit or stay
     public boolean toHit() {
         if (totalValue <= 16) {
             return true;
