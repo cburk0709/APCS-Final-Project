@@ -5,6 +5,7 @@ public class Client {
     //user defined int for starting pot
     //implement betting
     //show cards
+    //player has hand object
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
         String conditional = "";
