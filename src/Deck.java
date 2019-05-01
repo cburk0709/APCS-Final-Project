@@ -6,11 +6,11 @@ public class Deck {
     private ArrayList<Card> cards = new ArrayList<>();
     private int size;
     //constructor
-    public Deck(String[] ranks, String[] suits, int[] values) {
+    public Deck(String[] ranks, int[] values) {
         //two-deep for loop to ensure that all fields are assigned correctly
         for(int i = 0; i < ranks.length; i++){
-            for(int j = 0; j < suits.length; j++){
-                cards.add(new Card(ranks[i], suits[j], values[i]));
+            for(int j = 0; j < 4; j++){
+                cards.add(new Card(ranks[i], values[i]));
             }
         }
         //sets the size variable
@@ -20,11 +20,8 @@ public class Deck {
     }
     //checks whether or not the deck is empty
     public boolean isEmpty() {
-        if (size == 0){
-            return true;
-        } else {
-            return false;
-        }
+        if (size == 0){ return true; }
+        else { return false; }
     }
 
     public int getSize(){

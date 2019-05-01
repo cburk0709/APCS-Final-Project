@@ -1,24 +1,41 @@
  public class Card {
 
-    private String suit;
     private String rank;
     private int pointValue;
 
-    public Card(String cardRank, String cardSuit, int cardPointValue) {
-        suit = cardSuit;
+    public Card(String cardRank, int cardPointValue) {
         rank = cardRank;
         pointValue = cardPointValue;
     }
-    public String suit() { return suit; }
     public String rank() { return rank; }
     public int pointValue() { return pointValue; }
 
     public boolean matches(Card otherCard) {
-        if(otherCard.suit().equals(this.suit()) && otherCard.rank().equals(this.rank()) && otherCard.pointValue() == this.pointValue())
+        if(otherCard.rank().equals(this.rank()) && otherCard.pointValue() == this.pointValue())
             return true;
         else
             return false;
     }
     //Make it ascii
-    public String toString() { return rank + " of " + suit + " (point value = " + pointValue + ")"; }
+    public String toString() {
+
+        String top= "_____";
+        String midTopx= "|"+rank+"   |";
+        String midBot="|    |";
+        String Botx="|___" + rank + "|";
+        String midBotTen="|     |";
+        if(rank != "10") {
+            return top + "\n" + midTopx + "\n" + midBot + "\n" + Botx;
+        }else{
+            return top + "\n" + midTopx + "\n" + midBotTen + "\n" + Botx;
+
+        }
+    }
 }
+
+ //_____
+ //|K   |
+ //|    |
+ //|___K|
+
+
