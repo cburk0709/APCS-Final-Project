@@ -30,6 +30,10 @@ public class Hand implements Controls{
         cards.add(b);
     }
 
+    public void printFirstCard(){
+        System.out.println(cards.get(0).toString());
+    }
+
 
     //prints each Card in Hand object
     public void printHand(){
@@ -68,6 +72,8 @@ public class Hand implements Controls{
         System.out.println("Highest hand value is "+totalValue+".");
     }
 
+
+    //stay just prints something, might have to change
     public void stay(){
         System.out.println("Player stays.");
     }
