@@ -30,6 +30,10 @@ public class Hand implements Controls{
         cards.add(b);
     }
 
+    public void printFirstCard(){
+        System.out.println(cards.get(0).toString());
+    }
+
 
     //prints each Card in Hand object
     public void printHand(){
