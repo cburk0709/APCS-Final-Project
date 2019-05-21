@@ -26,3 +26,4 @@ Had project approved
 
 5/21
 Finished card toString and implemented client code.
+TODO: remove the printHand method from Hand's hit()
