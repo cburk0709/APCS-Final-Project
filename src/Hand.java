@@ -68,6 +68,8 @@ public class Hand implements Controls{
         System.out.println("Highest hand value is "+totalValue+".");
     }
 
+
+    //stay just prints something, might have to change
     public void stay(){
         System.out.println("Player stays.");
     }
