@@ -1,5 +1,11 @@
 public class Dealer{
-    private int totalValue;
+    public int totalValue;
+
+    public Hand h;
+
+    public Dealer(Deck deck){
+        h=new Hand(deck.deal(),deck.deal());
+    }
 
 
      //Checks if dealer is going to hit or stay
