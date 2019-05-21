@@ -67,6 +67,7 @@ public class Hand implements Controls{
                 aces--;
             }else{
                 System.out.println("Player busts with a "+totalValue+".");
+                break;
             }
         }
         System.out.println("Highest hand value is "+totalValue+".");
