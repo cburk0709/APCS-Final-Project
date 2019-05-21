@@ -1,5 +1,5 @@
 public interface Controls {
     //hit and stay
-    public Card hit();
+    public void hit(Deck d);
     public void stay();
 }
