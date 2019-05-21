@@ -8,13 +8,6 @@ public class Dealer{
     }
 
 
-     //Checks if dealer is going to hit or stay
-    public boolean toHit() {
-        if (totalValue <= 16) {
-            return true;
-        } else
-            return false;
-    }
     //prints out the cards dealer has
     public static void printCards(){
         System.out.println("Dealers Cards");
