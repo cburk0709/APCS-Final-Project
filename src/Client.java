@@ -23,7 +23,7 @@ public class Client {
                 System.out.println("Dealer Cards:");
                 myDealer.h.printFirstCard();
 
-                if(myDealer.h.totalValue<=16) {
+                while (myDealer.h.totalValue<=16) {
                     myDealer.h.hit(myDeck);
                 }
 
@@ -37,7 +37,6 @@ public class Client {
                     myHand.hit(myDeck);
                 } else if (conditional.equals("stay")){
                     myHand.stay();
-                    myDealer.
                 }
             }
         }
