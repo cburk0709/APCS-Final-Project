@@ -22,6 +22,11 @@ public class Client {
             while (myHand.totalValue <= 21){
                 System.out.println("Dealer Cards:");
                 myDealer.h.printFirstCard();
+
+                if(myDealer.h.totalValue<=16) {
+                    myDealer.h.hit(myDeck);
+                }
+
                 System.out.println();
                 System.out.println("Your hand:");
                 myHand.printHand();
