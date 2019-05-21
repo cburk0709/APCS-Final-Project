@@ -20,8 +20,20 @@ public class Client {
             Dealer myDealer = new Dealer(myDeck);
             Hand myHand = new Hand(myDeck.deal(), myDeck.deal());
             while (myHand.totalValue <= 21){
+                System.out.println("Dealer Cards:");
+                myDealer.h.printFirstCard();
+                System.out.println();
+                System.out.println("Your hand:");
                 myHand.printHand();
-                myDealer.h.
+
+                System.out.print("hit or stay? -- ");
+                conditional = userInput.next();
+                if (conditional.equals("hit")){
+                    myHand.hit(myDeck);
+                } else if (conditional.equals("stay")){
+                    myHand.stay();
+                    myDealer.
+                }
             }
         }
     }
