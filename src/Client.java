@@ -21,7 +21,9 @@ public class Client {
             Hand myHand = new Hand(myDeck.deal(), myDeck.deal());
             while (myHand.totalValue <= 21){
                 myHand.printHand();
-                myDealer.h.
+                if(myDealer.h.totalValue<=16){
+                    myDealer.h.hit(myDeck);
+                }
             }
         }
     }

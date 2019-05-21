@@ -30,6 +30,7 @@ public class Hand implements Controls{
         cards.add(b);
     }
 
+    //prints first Card in cards; used for Dealer
     public void printFirstCard(){
         System.out.println(cards.get(0).toString());
     }
