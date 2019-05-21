@@ -58,7 +58,6 @@ public class Hand implements Controls{
                 aces++;
             }
             cards.add(c);
-            printHand();
         }
         //updates totalValue; checks for bust and if the player busts changes aces, if any, from 11 to 1
         totalValue+=c.pointValue();
