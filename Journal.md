@@ -22,5 +22,7 @@ Had project approved
   -Hand: Daniel
   -Card/Deck, Controls, Debugging: Connor
   -Dealer: Nick
-  -toString() in Card: Thomas
+  -toString() in Card/ rules expert: Thomas
 
+5/21
+Finished card toString and implemented client code.
