@@ -8,7 +8,7 @@ public class Deck {
     //constructor
     public Deck(String[] ranks, int[] values) {
         //two-deep for loop to ensure that all fields are assigned correctly
-        for(int i = 0; i < ranks.length; i++){
+        for(int i = 0; i <= ranks.length -1; i++){
             for(int j = 0; j < 4; j++){
                 cards.add(new Card(ranks[i], values[i]));
             }
