@@ -23,6 +23,7 @@ public class Client {
             while (gameState){
                 System.out.println("Dealer Cards:");
                 myDealer.h.printFirstCard();
+                System.out.println(" ____"+"\n"+"|    |"+"\n"+"|    |"+"\n"+"|____|");
 
                 System.out.println();
                 System.out.println("Your hand:");
@@ -37,11 +38,15 @@ public class Client {
                     System.out.print("hit or stay? -- ");
                     hitOrStay = userInput.next();
                 }
-                while (myDealer.h.totalValue<=16) {
-                    myDealer.h.hit(myDeck);
+                if (myHand.totalValue <= 21){
+                    while (myDealer.h.totalValue<=16) {
+                        myDealer.h.hit(myDeck);
+                    }
                 }
+
                 myDealer.h.printHand();
-                if (myHand.totalValue <= 21 && myHand.totalValue > myDealer.h.totalValue){
+
+                if (myHand.totalValue <= 21 && (myHand.totalValue > myDealer.h.totalValue || myDealer.h.totalValue > 21)){
                     System.out.println("Player wins");
                 } else {
                     System.out.println("Dealer wins");
