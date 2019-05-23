@@ -71,7 +71,6 @@ public class Hand implements Controls{
                 break;
             }
         }
-        System.out.println("Highest hand value is "+totalValue+".");
     }
 
 
