@@ -23,21 +23,25 @@ public class Client {
                 System.out.println("Dealer Cards:");
                 myDealer.h.printFirstCard();
 
-                while (myDealer.h.totalValue<=16) {
-                    myDealer.h.hit(myDeck);
-                }
+
 
                 System.out.println();
                 System.out.println("Your hand:");
                 myHand.printHand();
 
                 System.out.print("hit or stay? -- ");
-                conditional = userInput.next();
-                if (conditional.equals("hit")){
+                String hitOrStay = "";
+                hitOrStay = userInput.next();
+                while (hitOrStay.equals("hit")){
                     myHand.hit(myDeck);
-                } else if (conditional.equals("stay")){
-                    myHand.stay();
+                    myHand.printHand();
+                    System.out.println("Your hand is worth " + myHand.totalValue);
+                    hitOrStay = userInput.next();
                 }
+                while (myDealer.h.totalValue<=16) {
+                    myDealer.h.hit(myDeck);
+                }
+                myDealer.h.printHand();
             }
         }
     }
