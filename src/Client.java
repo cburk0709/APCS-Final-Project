@@ -7,8 +7,8 @@ public class Client {
     //show cards
     //player has hand object
     public static void main(String[] args) {
-        Scanner userInput = new Scanner(System.in);
         while (true){
+            Scanner userInput = new Scanner(System.in);
             System.out.println("Welcome to Blackjack. To play, enter any token besides ctrl-C");
             String conditional = userInput.next();
             System.out.print("Starting pot -- ");
