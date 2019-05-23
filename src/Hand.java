@@ -66,7 +66,6 @@ public class Hand implements Controls{
                 totalValue-=10;
                 aces--;
             }else{
-                System.out.println("Player busts with a "+totalValue+".");
                 break;
             }
         }

@@ -13,9 +13,6 @@ public class Dealer{
         System.out.println("Dealers Cards");
     }
 
-    public static void main(String[] args) {
-        System.out.println(" _____"+"\n"+"|     |"+"\n"+"| = = |"+"\n"+"|_____|");
-    }
 }
 
 
@@ -23,4 +20,3 @@ public class Dealer{
     //hits on 16
     //stays on anything higher
     //print statement for a card
-
