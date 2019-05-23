@@ -20,17 +20,15 @@
     public String toString() {
 
         String top= " ____";
-        String topTen= " ____";
+        String topTen= " _____";
         String midTopx= "|"+rank+"   |";
-        String tenmidTopx= "|"+rank+"  |";
         String midBot="|    |";
         String Botx="|___" + rank + "|";
-        String tenBotx="|__" + rank + "|";
-        String midBotTen="|    |";
+        String midBotTen="|     |";
         if(rank != "10") {
             return top + "\n" + midTopx + "\n" + midBot + "\n" + Botx;
         }else{
-            return topTen + "\n" + tenmidTopx + "\n" + midBotTen + "\n" + tenBotx;
+            return topTen + "\n" + midTopx + "\n" + midBotTen + "\n" + Botx;
 
         }
     }
@@ -41,7 +39,14 @@
    |    |
    |___K| */
 
- /* ____
-   |10  |
-   |    |
-   |__10|  */
+ /* _____
+   |10   |
+   |     |
+   |___10|  */
+
+ /* _____
+   |     |
+   |     |
+   |_____|
+
+  */
