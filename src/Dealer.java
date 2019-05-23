@@ -13,8 +13,9 @@ public class Dealer{
         System.out.println("Dealers Cards");
     }
 
-
-
+    public static void main(String[] args) {
+        System.out.println(" _____"+"\n"+"|     |"+"\n"+"| = = |"+"\n"+"|_____|");
+    }
 }
 
 
