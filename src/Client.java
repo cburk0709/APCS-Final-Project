@@ -7,13 +7,12 @@ public class Client {
     //show cards
     //player has hand object
     public static void main(String[] args) {
-
         Scanner userInput = new Scanner(System.in);
-        String conditional = "";
-
-        while (!conditional.equals("quit") || !conditional.equals("no")){
-            System.out.println("Welcome to Blackjack. To play, enter any token besides \"quit\"");
-            conditional = userInput.next();
+        while (true){
+            System.out.println("Welcome to Blackjack. To play, enter any token besides ctrl-C");
+            String conditional = userInput.next();
+            System.out.print("Starting pot -- ");
+            int myPot = userInput.nextInt();
             int[] myValues =   {2,   3,   4,   5,   6,   7 ,  8,   9,    10,   10,  10, 10, 11};
             String[] myRanks = {"2", "3", "4", "5", "6", "7", "8", "9",  "10", "J", "Q", "K", "A"};
             Deck myDeck = new Deck(myRanks, myValues);
@@ -36,6 +35,9 @@ public class Client {
                     myHand.hit(myDeck);
                     myHand.printHand();
                     System.out.print("hit or stay? -- ");
+                    if (myHand.totalValue >= 21){
+                        break;
+                    }
                     hitOrStay = userInput.next();
                 }
                 if (myHand.totalValue <= 21){
@@ -51,8 +53,6 @@ public class Client {
                 } else {
                     System.out.println("Dealer wins");
                 }
-                System.out.println("Play again? (yes or no) -- ");
-                conditional = userInput.next();
                 gameState = false;
             }
         }
