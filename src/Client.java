@@ -11,7 +11,7 @@ public class Client {
         Scanner userInput = new Scanner(System.in);
         String conditional = "";
 
-        while (!conditional.equals("quit")){
+        while (!conditional.equals("quit") || !conditional.equals("no")){
             System.out.println("Welcome to Blackjack. To play, enter any token besides \"quit\"");
             conditional = userInput.next();
             int[] myValues =   {2,   3,   4,   5,   6,   7 ,  8,   9,    10,   10,  10, 10, 11};
@@ -19,11 +19,10 @@ public class Client {
             Deck myDeck = new Deck(myRanks, myValues);
             Dealer myDealer = new Dealer(myDeck);
             Hand myHand = new Hand(myDeck.deal(), myDeck.deal());
-            while (myHand.totalValue <= 21){
+            boolean gameState = true;
+            while (gameState){
                 System.out.println("Dealer Cards:");
                 myDealer.h.printFirstCard();
-
-
 
                 System.out.println();
                 System.out.println("Your hand:");
@@ -35,13 +34,21 @@ public class Client {
                 while (hitOrStay.equals("hit")){
                     myHand.hit(myDeck);
                     myHand.printHand();
-                    System.out.println("Your hand is worth " + myHand.totalValue);
+                    System.out.print("hit or stay? -- ");
                     hitOrStay = userInput.next();
                 }
                 while (myDealer.h.totalValue<=16) {
                     myDealer.h.hit(myDeck);
                 }
                 myDealer.h.printHand();
+                if (myHand.totalValue <= 21 && myHand.totalValue > myDealer.h.totalValue){
+                    System.out.println("Player wins");
+                } else {
+                    System.out.println("Dealer wins");
+                }
+                System.out.println("Play again? (yes or no) -- ");
+                conditional = userInput.next();
+                gameState = false;
             }
         }
     }
