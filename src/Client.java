@@ -142,7 +142,7 @@ public class Client {
 
                     //Neither busts
                     if(myDealer.h.totalValue>myHand.totalValue){
-                        System.out.println("Dealer had a "+myDealer.h.totalValue+", the player only had a "+myDealer.h.totalValue+"!");
+                        System.out.println("Dealer had a "+myDealer.h.totalValue+", the player only had a "+myHand.totalValue+"!");
 
                     //Tie
                     }else if(myDealer.h.totalValue==myHand.totalValue){
